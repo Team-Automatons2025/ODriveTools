@@ -1,0 +1,10 @@
+// if found any error or lose in state use this function to ignore the error if it is fatel...
+
+void odrivecheck(){
+    if (odrive.getProcedureResult() == PROCEDURE_RESULT_DISARMED
+        || odrive.getError() == ODRIVE_ERROR_CURRENT_LIMIT_VIOLATION) 
+    {
+      odrive.clearErrors();
+      odrive.setState(AXIS_STATE_CLOSED_LOOP_CONTROL);
+    }
+  }
