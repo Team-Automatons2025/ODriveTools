@@ -1,4 +1,7 @@
 // if found any error or lose in state use this function to ignore the error if it is fatel...
+// the fuction is used within the class while developing 
+// change according to your code except the logic anf function name
+// Eg: PROCEDURE_RESULT_DISARMED       ....can be found in enums file.
 
 void odrivecheck(){
     if (odrive.getProcedureResult() == PROCEDURE_RESULT_DISARMED
